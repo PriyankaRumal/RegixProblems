@@ -11,6 +11,9 @@ namespace UserRegistration
             string Fname=Console.ReadLine();
             UserValidation userValidation = new UserValidation();
             userValidation.ValidatateFirstName(Fname);
+            Console.WriteLine("enter your Last Name:");
+            string Lname = Console.ReadLine();
+            userValidation.ValidatateLastName(Lname);
         }
     }
 }
