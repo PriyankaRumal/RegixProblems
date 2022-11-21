@@ -21,6 +21,10 @@ namespace UserRegistration
             string email = Console.ReadLine();
             userValidation.ValidateEmail(email);
 
+            Console.WriteLine("Enter PhoneNumber: ");
+            string phonenumber = Console.ReadLine();
+            userValidation.ValidatePhoneNumber(phonenumber);
+
         }
     }
 }
