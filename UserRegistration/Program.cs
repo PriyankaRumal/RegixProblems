@@ -28,6 +28,10 @@ namespace UserRegistration
             Console.WriteLine("Enter password 8 characters");
             string password = Console.ReadLine();
             userValidation.ValidatePassword(password);
+
+            Console.WriteLine("Enter password 1 uppercase");
+            string Uppercase = Console.ReadLine();
+            userValidation.ValidateUppercase(Uppercase);
         }
     }
 }
