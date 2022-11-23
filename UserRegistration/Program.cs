@@ -25,6 +25,9 @@ namespace UserRegistration
             string phonenumber = Console.ReadLine();
             userValidation.ValidatePhoneNumber(phonenumber);
 
+            Console.WriteLine("Enter password 8 characters");
+            string password = Console.ReadLine();
+            userValidation.ValidatePassword(password);
         }
     }
 }
