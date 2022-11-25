@@ -14,6 +14,7 @@ namespace UserRegistration
         public const string PASSWORD_REGEX = "[a-z,A-Z,0-9]{8,}$";
         public const string UPPERCASE_REGEX = "^[A-Z][a-z]{7}$";
         public const string NUMERICPASSWORD_REGEX = "^[a-z0-9A-Z]{8}$";
+        public const string SPECIALCHARACTER_REGIX="^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,10}$"
         public void ValidatateFirstName(string firstName)
         {
             Regex regex = new Regex(First_Name);
@@ -60,6 +61,13 @@ namespace UserRegistration
         {
             Regex regex = new Regex(NUMERICPASSWORD_REGEX);
             bool result = regex.IsMatch(numericpassword);
+            Console.WriteLine(result);
+        }
+
+         public void ValidateSpecialCharPassword(string numericpassword)
+        {
+            Regex regex = new Regex(SPECIALCHARACTER_REGIX);
+            bool result = regex.IsMatch(SPECIALCHARACTER_REGIX);
             Console.WriteLine(result);
         }
     }

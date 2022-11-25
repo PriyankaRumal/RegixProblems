@@ -36,6 +36,10 @@ namespace UserRegistration
             Console.WriteLine("Enter 1 numeric password");
             string numericpassword = Console.ReadLine();
             userValidation.ValidateNumericPassword(numericpassword);
+
+             Console.WriteLine("Enter 1 special password");
+            string specialChar = Console.ReadLine();
+            userValidation.ValidateSpecialCharPassword(specialChar);
         }
     }
 }
