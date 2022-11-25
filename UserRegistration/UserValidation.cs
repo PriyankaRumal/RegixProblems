@@ -64,10 +64,10 @@ namespace UserRegistration
             Console.WriteLine(result);
         }
 
-         public void ValidateSpecialCharPassword(string numericpassword)
+         public void ValidateSpecialCharPassword(string specialChar)
         {
             Regex regex = new Regex(SPECIALCHARACTER_REGIX);
-            bool result = regex.IsMatch(SPECIALCHARACTER_REGIX);
+            bool result = regex.IsMatch(specialChar);
             Console.WriteLine(result);
         }
     }
