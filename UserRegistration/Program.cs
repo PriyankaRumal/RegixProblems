@@ -7,39 +7,27 @@ namespace UserRegistration
         static void Main(string[] args)
         {
             Console.WriteLine("Welcome to User Registration Problems Statement Using REGEX");
-            Console.WriteLine("enter your First Name:");
-            string Fname=Console.ReadLine();
-
-            UserValidation userValidation = new UserValidation();
-            userValidation.ValidatateFirstName(Fname);
-
-            Console.WriteLine("enter your Last Name:");
-            string Lname = Console.ReadLine();
-            userValidation.ValidatateLastName(Lname);
-
-            Console.WriteLine("Enter your Email: ");
+            //User FirstName
+            Console.WriteLine("Enter the firstname: ");
+            string FirstName = Console.ReadLine();
+            Console.WriteLine(UserValidation.CheckFirstName(FirstName));
+            //User LastName
+            Console.WriteLine("Enter the lastname: ");
+            string lastname = Console.ReadLine();
+            Console.WriteLine(UserValidation.CheckLastName(lastname));
+            //User Email
+            Console.WriteLine("Enter the email: ");
             string email = Console.ReadLine();
-            userValidation.ValidateEmail(email);
-
-            Console.WriteLine("Enter PhoneNumber: ");
+            Console.WriteLine(UserValidation.checkEmail(email));
+            //User PhoneNumber
+            Console.WriteLine("Enter the phonenumber: ");
             string phonenumber = Console.ReadLine();
-            userValidation.ValidatePhoneNumber(phonenumber);
-
-            Console.WriteLine("Enter password 8 characters");
+            Console.WriteLine(UserValidation.checkMobileNumber(phonenumber));
+            //User Password
+            Console.WriteLine("Enter the password: ");
             string password = Console.ReadLine();
-            userValidation.ValidatePassword(password);
+            Console.WriteLine(UserValidation.checkPassword(password));
 
-            Console.WriteLine("Enter password 1 uppercase");
-            string Uppercase = Console.ReadLine();
-            userValidation.ValidateUppercase(Uppercase);
-
-            Console.WriteLine("Enter 1 numeric password");
-            string numericpassword = Console.ReadLine();
-            userValidation.ValidateNumericPassword(numericpassword);
-
-             Console.WriteLine("Enter 1 special password");
-            string specialChar = Console.ReadLine();
-            userValidation.ValidateSpecialCharPassword(specialChar);
         }
     }
 }
